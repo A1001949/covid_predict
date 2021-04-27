@@ -17,5 +17,4 @@ raw_data <- read.csv(url("https://covid.ourworldindata.org/data/owid-covid-data.
 
 #### Save data ### 
 # Please note that by overwriting this csv file, the analysis covered in the markdown file may be different due to updated data.
-# This is because according to Open Data Toronto, this data is completely refreshed and overwritten on a weekly basis.
-write_csv(raw_data, "inputs/data/raw_data.csv")
+write_csv(raw_data, "inputs/data/raw_covid_data.csv")

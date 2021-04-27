@@ -13,11 +13,11 @@
 library(tidyverse)
 
 # Read in the raw data. 
-raw_data <- readr::read_csv("inputs/data/raw_data.csv")
+raw_data <- readr::read_csv("inputs/data/raw_covid_data.csv")
 
 # Only keep rows that are from North America
 # Clean col names with janitor - remove whitespaces and capitals
-clean_data <- 
+clean_covid_data <- 
   raw_data %>% 
   filter(continent == "North America") %>% 
   janitor::clean_names()
@@ -26,4 +26,4 @@ clean_data <-
 rm(raw_data)
 
 #### Save data ### 
-write_csv(clean_data, "inputs/data/clean_data.csv")
+write_csv(clean_covid_data, "inputs/data/clean_covid_data.csv")
